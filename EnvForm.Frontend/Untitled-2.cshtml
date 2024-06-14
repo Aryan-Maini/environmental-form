@@ -1,0 +1,2065 @@
+<form asp-action="SumbitSurvey">
+    
+<div class="box">
+  <h2>Energy Sources Survey</h2>
+    <div class="form-group">
+        <label for="">Q1 What are the various sources of energy used in school?</label><br>
+      <h3> Electricity</h3>
+        <div>
+            <input type="checkbox" name="ElectricityMunicipality" />
+            <label name="ElectricityMunicipality">Electricity from municipality/electrical company</label>
+        </div>
+        <div>
+            <input type="checkbox" name="ElectricityGenerator" />
+            <label name="ElectricityGenerator">electricity from generator</label>
+        </div>
+        <div>
+            <label for=""> if yes, specify the fuel used</label>
+            <input type="text" name="GeneratorFuelType" />
+        </div>
+        <div>
+            <label for=""> Amount of fuel used in a month</label>
+            <input type="number" name="FuelAmount" />
+        </div>
+        <div>
+            <label for=""> Generator Capacity KW/H </label>
+            <input type="number" name="Generator Capacity" />
+        </div>
+        <div>
+            <label for=""> Frequency of use of the generator </label><br>
+            <input type="radio" name="OnlyWhenRequired" />
+            <label for=""> Only When Required other sources down </label>
+          
+            <input type="radio" name="GeneratorFrequency" value="Regularly" />
+            <label for="">Regularly Specify purposes and duration</label>
+            <input type="text" name="GeneratorUsageDetails" />
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <h3>Gas:</h3>
+        <div>
+            <input type="checkbox" name="GasCylinder" />
+            <label name="GasCylinder">Gas Cylinder</label>
+        </div>
+        <div>
+            <input type="checkbox" name="PNGfuel" />
+            <label name="PNGfuel"> PNG </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="HasSolarPanels">Q2 does your school have any alternative sources of energy generation</label>
+        <input type="radio" name="HasSolarPanels" value="true" /><label for="">Yes</label>
+        <input type="radio" name="HasSolarPanels" value="false" /><label for="">No</label>
+    </div>
+    <div>
+        <label">Do Some Devices run on solar Energy?</label>
+        <input type="radio" name="DevicesUsesSolarPanels" value="true" /><label for="">Yes</label>
+        <input type="radio" name="DevicesUsesSolarPanels" value="false" /><label for="">No</label>
+    </div>
+    <div>
+        <label for="">What other purposes is solar energy used for? specify</label>
+        <input type="text" name="OtherUsesSolarPanels" />
+    </div>
+    <div class="form-group">
+        <label"> does your school get bills for consumption of energy and other energy sources</label>
+        <input type="radio" name="RecievesEnergyBills" value="true" /><label for="">Yes</label>
+        <input type="radio" name="RecievesEnergyBills" value="false" /><label for="">No</label>
+    </div>
+    <div class="form-group">
+        <table border="1">
+            <tr>
+                <th>SNo</th>
+                <th>Source</th>
+                <th>Unit Consumption</th>
+                <th>Total Cost</th>
+                <th>Energy Usage</th>
+                </tr>
+                <tr>
+                <td>1</td>
+                <td>Electricity bills from regional electricity board/distribution company kWh please specify</td>
+                <td>kWh</td>
+                <td><input type="number" name="ElectricityCost" /></td>
+                    <td><input type="text" name="ElectricityYearlyUsage" /></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                    <td>Diesel HSD BLDO LSHS LSFO</td>
+                    <td>kWh</td>  
+                    <td><input type="number" name="FuelCost" /></td>
+                    <td><input type="number" name="FuelUsage" /></td>
+            </tr>
+        </table>
+    </div>
+    <div class="form-group">
+        <label for=""> Does the School have Openable windows</label>
+        <input type="radio" name="HasOpenableWindows" value="true" /><label for="">Yes</label>
+        <input type="radio" name="HasOpenableWindows" value="false" /><label for="">No</label>
+    </div>
+    <div class="form-group">
+        <label for=""> Do the windows allow natural/cross-ventilation in the : </label>
+        <div>
+            <input type="checkbox" name="VentilationClassroom" />
+            <label for="">Classrooms</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationAuditorium" />
+            <label for="">Auditoriums</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationMultipurposeHalls" />
+            <label for="">Multipurpose Halls</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationScienceLabs" />
+            <label for="">Science Labs</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationTeacherRoom" />
+            <label for="">Teacher room</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationClosedGym" />
+            <label for="">Closed Gym</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationMusicRoom" />
+            <label for="">Music Room</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationComputerLabs" />
+            <label for="">Computer Labs</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationMathsLabs" />
+            <label for="">Maths Labs</label>
+        </div>
+        <div>
+            <input type="checkbox" name="VentilationOfficeSpace" />
+            <label for="">Office Space</label>
+        </div>
+        <div>
+            <input type="text" name="VentilationScienceLabs" placeholder="Any Other specify" />
+        </div>
+        <div class="form-group">
+            <label for=""> Do the windows allow natural/cross-ventilation in the : </label>
+            <div>
+                <input type="checkbox" name="CeilingFanClassroom" />
+                <label for="">Classrooms</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanAuditorium" />
+                <label for="">Auditoriums</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanMultipurposeHalls" />
+                <label for="">Multipurpose Halls</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanScienceLabs" />
+                <label for="">Science Labs</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanTeacherRoom" />
+                <label for="">Teacher room</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanClosedGym" />
+                <label for="">Closed Gym</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanMusicRoom" />
+                <label for="">Music Room</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanComputerLabs" />
+                <label for="">Computer Labs</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanMathsLabs" />
+                <label for="">Maths Labs</label>
+            </div>
+            <div>
+                <input type="checkbox" name="CeilingFanOfficeSpace" />
+                <label for="">Office Space</label>
+            </div>
+            <div>
+                <input type="text" name="VentilationScienceLabs" placeholder="Any Other specify" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for=""> Do the windows allow natural/cross-ventilation in the : </label>
+            <div>
+                <input type="checkbox" name="TopFloorClassroom" />
+                <label for="">Classrooms</label>
+            </div>
+            <div>
+                <input type="checkbox" name="TopFloorAuditorium" />
+                <label for="">Auditoriums</label>
+            </div>
+            <div>
+                <input type="checkbox" name="TopFloorMultipurposeHalls" />
+                <label for="">Multipurpose Halls</label>
+            </div>
+            <div>
+                <input type="checkbox" name="TopFloorClosedGym" />
+                <label for="">Closed Gym</label>
+            </div>
+        </div>
+        <div>
+            <input type="checkbox" name="TopFloorLabs" />
+            <label for="">Maths Labs</label>
+        </div>
+        <div>
+            <input type="checkbox" name="TopFloorOfficeSpace" />
+            <label for="">Office Space</label>
+        </div>
+        <div>
+            <input type="text" name="TopFloorAnyOther" placeholder="Any Other specify" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for=""> Do the windows allow natural/cross-ventilation in the : </label>
+        <div>
+            <input type="checkbox" name="DayLightClassroom" />
+            <label for="">Classrooms</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DayLightAuditorium" />
+            <label for="">Auditoriums</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DayLightMultipurposeHalls" />
+            <label for="">Multipurpose Halls</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DayLightScienceLabs" />
+            <label for="">Science Labs</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DayLightTeacherRoom" />
+            <label for="">Teacher room</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DayLightClosedGym" />
+            <label for="">Closed Gym</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DaylightMusicRoom" />
+            <label for="">Music Room</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DayLightComputerLabs" />
+            <label for="">Computer Labs</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DayLightMathsLabs" />
+            <label for="">Maths Labs</label>
+        </div>
+        <div>
+            <input type="checkbox" name="DayLightOfficeSpace" />
+            <label for="">Office Space</label>
+        </div>
+        <div>
+            <input type="text" name="DayLightScienceLabs" placeholder="Any Other specify" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for=""> Do the windows allow natural/cross-ventilation in the : </label>
+        <div>
+            <input type="checkbox" name="TopFloorClassroom" />
+            <label for="">Classrooms</label>
+        </div>
+
+
+        <div>
+            <input type="checkbox" name="TopFloorClosedGym" />
+            <label for="">Closed Gym</label>
+        </div>
+    </div>
+
+    <div>
+        <input type="checkbox" name="TopFloorOfficeSpace" />
+        <label for="">Office Space</label>
+    </div>
+    <div>
+        <input type="checkbox" name="TopFloorOther" />
+        <label for="">Other</label>
+    </div>
+    <div class="form-group">
+        <label for="">What type of light sources are used in your school? please tick mark</label>
+    </div>
+    <div> <input type="checkbox" name="FlorescentLight" /><label for="">Florescent Light</label></div>
+    <div> <input type="checkbox" name="IncandescentLight" /><label for="">Incandescent Light</label></div>
+    <label for="">Energy Conversation Practices Survey</label>
+    <div class="form-group">
+        <label for="">does the school make conscious efforts to avoid wastage of energy and conserve energy</label>
+        <input type="radio" name="EffortsToConserveEnergy" value="true" />
+        <label for="">Yes</label>
+        <input type="radio" name="EffortsToConserveEnergy" value="false" />
+        <label for="">No</label>
+    </div>
+    <div class="form-group">
+        <label for="">Are lights off When Required</label>
+        <input type="radio" name="NonEssentialLightsOff" value="true" />
+        <label for="">Yes</label>
+        <input type="radio" name="NonEssentialLightsOff" value="false" />
+        <label for="">No</label>
+    </div>
+    <div class="form-group">
+        <label for=""> Are School Complex and printers programmed to save energy? sleep/shutdown mode when not in use</label>
+        <input type="radio" name="DevicesEnergySavingMode" value="true"><label for="">Yes</label>
+        <input type="radio" name="DevicesEnergySavingMode" value="false"><label for="">No</label>
+        <input type="text" name="DevicesEnergySavingMode" placeholder="Any other please specify" />
+    </div>
+    <div class="form-group">
+        <label for="">Are Awareness programs Organized?</label>
+        <input type="radio" name="AwarenessPrograms" value="true" />
+        <label for="">Yes</label>
+        <input type="radio" name="AwarenessPrograms" value="false" />
+        <label for="">No</label>
+        <input type="text" name="AwarenessPrograms" placeholder="Any other please specify"
+    </div>
+    <div class="form-group">
+        <label for="">How Many Such Programmes are organized in a year? Please specify</label>
+        <input type="number" name="NumberOfAwarenessProgrammes" />
+    </div>
+    <div class="d-block">
+        <div class="form-group">
+            <table border="1">
+                
+                <thead>
+                  <tr>
+                <th>S n</th>
+                <th>Classroom</th>
+                <th>Lights</th>
+                <th>Fans</th>
+                <th>Computer Monitor</th>
+                <th>Printers</th>
+                <th>LCD</th>
+                <th>Other Appliances</th>
+                <th>Total </th>
+                </tr>
+                  <thead>
+                 
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Class IX</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Class X </td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Class XI</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Class XII</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+            </table>
+            <p>
+                <u>Record Key</u><br />
+                = offwhen not required/positive energy useon when required<br />
+                = on with no people - negative energy useon when not required<br />
+                <ol>
+                    <li> Schedule a particular hour of the day viz 12:00pm to 1:00pm to visit the classrooms</li>
+                    <li>
+                        It would be interesting to observer classrooms before and after classroom hours
+                        Use these observations to subtansiate your conclusions
+                    </li>
+                    <li>Make similar observations on weekend/holiday/vacation period if you happen to visit school for some other purpose</li>
+                </ol><br />
+                <u>Time Period</u><br />
+                <b>12:00pm to 1:00pm</b>
+            </p>
+        </div>
+    </div>
+        <div class="form-group">
+            <table>
+<thead><tr>
+    <th>S n</th>
+    <th>Classroom</th>
+    <th>Lights</th>
+    <th>Fans</th>
+    <th>Computer Monitor</th>
+    <th>Printers</th>
+    <th>LCD</th>
+    <th>Other Appliances</th>
+    <th>Total </th>
+    </tr></thead>
+
+  
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Computer Room/Lab</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Lab1</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Lab2</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Lab3</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+
+
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Lab4</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Library</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Sport Areas/Play Grounds</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Gymnasium</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Other Open Areas1</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Other Open Areas2</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Other Open Areas3</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="ClassroomSn" /></td>
+                    <td>Other Open Areas4</td>
+                    <td><input type="checkbox" name="ClassroomLights" /></td>
+                    <td><input type="checkbox" name="ClassroomFans" /></td>
+                    <td><input type="checkbox" name="ClassroomComputerMonitors" /></td>
+                    <td><input type="checkbox" name="ClassroomPrinters" /></td>
+                    <td><input type="checkbox" name="ClassroomLCD" /></td>
+                    <td><input type="checkbox" name="ClassroomOtherAppliances" /></td>
+                    <td><input type="number" name="ClassroomTotalYes" /></td>
+                    <td><input type="number" name="ClassroomTotalNo" /></td>
+                </tr>
+            </table>
+    </div>
+
+
+    <button type="submit" class="btn-primary">Submit</button>
+  </form></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Flora and Fauna -->
+<div class="box">  
+    <header><h2><u><b>Flora and Fauna</b></u></h2></header>
+<form asp-action="SumbitSurvey">
+    <ol>
+        <li>
+            <label for="">
+                Does Your school have a natural green ambience
+            </label>
+            <input name="HasGreenAmbience" type="radio" value="true" />Yes
+            <input name="HasGreenAmbience" type="radio" value="false" />No
+        </li>
+        <li>
+            Each Plant animal and microorganism contributes to the diversity of an area <br />
+            Which one of the following productive areas are present in your school <br />
+            please tick and specify the approximate area> <br />
+        </li>
+        <ul>
+            <li>
+                <label for="">Estimate the number of trees in the school campus:</label>
+                <select name="TreeCount">
+                    <option value="Upto 10">Upto 10 Trees</option>
+                    <option value="10-50">10-50</option>
+                    <option value="50-100">50-100</option>
+                    <option value="100-200">100-200</option>
+                    <option value="200-500">200-500</option>
+                    <option value="Above500">Above 500 Trees</option>
+                    <button type="submit">Submit</button>
+                </select>
+            </li>
+            <li>
+                <label for="">
+                    Gardens with bushes &amp;/or shrubs
+                </label>
+                <input name="GardenBushes" type="radio" value="true" />Yes
+                <input name="GardenBushes" type="radio" value="false" />No
+            </li>
+            <li>
+                <label for="">
+                    Vegetable Garden
+                </label>
+                <input name="VegetableGarden" type="radio" value="true" />Yes
+                <input name="VegetableGarden" type="radio" value="false" />No
+            </li>
+            <li>
+                <label for="">
+                    Spaces with verticle gardens and hanging plants in the school campus
+                </label>
+                <input name="VerticleGarden" type="radio" value="true" />Yes
+                <input name="VerticleGarden" type="radio" value="false" />No
+            </li>
+            <li>
+                <label for="">
+                    Indoor/ covered spaces interspaced with potted plants
+                </label>
+                <input name="IndoorPottedPlants" type="radio" value="true" />Yes
+                <input name="IndoorPottedPlants" type="radio" value="false" />No
+            </li>
+            <li>
+                <label for="">
+                    Pavement/Passages/paths lined up with potted plants
+                </label>
+                <input name="PassagesPottedPlants" type="radio" value="true" />Yes
+                <input name="PassagesPottedPlants" type="radio" value="false" />No
+            </li>
+            <li>
+                <label for="">
+                    Seasonal or perineal Water bodiesponds etc
+                </label>
+                <input name="SeasonalWaterBodies" type="radio" value="true" />Yes
+                <input name="SeasonalWaterBodies" type="radio" value="false" />No
+            </li>
+            <li>
+                <label for="">
+                    Medicinal Plants/ herb area or garden
+                </label>
+                <input name="Garden" type="radio" value="true" />Yes
+                <input name="Garden" type="radio" value="false" />No
+            </li>
+            <li>
+                <label for="">
+                    Butterfly garden
+                </label>
+                <input name="ButterflyGarden" type="radio" value="true" />Yes
+                <input name="ButterflyGarden" type="radio" value="false" />No
+            </li>
+            <li>
+                <label for="">
+                    Bird nest/Bird Feeders and Houses<br />
+                    feeders and houses disrupt the innate ability of avian species to fend for themselves
+                </label>
+                <input name="BirdFeeders" type="radio" value="true" />Yes
+                <input name="BirdFeeders" type="radio" value="false" />No
+            </li>
+        </ul>
+        <li>
+            <div>
+                <label for="">
+                    Are there adequate spaces with plants and trees besides lawns in sufficient number
+                    in the school campus?rows of trees etc
+                </label>
+                <input name="AdequatePlantSpaces" type="radio" value="true" />Yes
+                <input name="AdequatePlantSpaces" type="radio" value="false" />No
+            </div>
+            <ol>
+                <li><div>
+                    <label for="">
+                        Do you find a greater number of native and non-indegenous than non-native plants/trees in the school campus<br />
+                        native Trees are indigenous to a given region or ecosystem
+                    </label>
+                    <input name="NonNativePlants" type="radio" value="true" />Yes
+                    <input name="NonNativePlants" type="radio" value="false" />No
+                </div></li><li>
+                <div>
+                    <label for="">
+                        How many native trees are in the school campus?
+                    </label>
+                    <ul>
+                        <li>
+                            <label for="">None</label><input type="radio" name="native" value="0" />
+                        </li>
+                        <li>
+                            <label for="">Less than 5-10 trees per acre of area</label><input type="radio" name="native" value="lessthan5-10" />
+                        </li>
+                        <li>
+                            <label for="">About 5-10 trees per acre of area</label><input type="radio" name="native" value="About5-10" />
+                        </li>
+                        <li>
+                            <label for="">More than 10 trees per acre of area</label><input type="radio" name="native" value="Morethan10" />
+                        </li>
+                    </ul>
+                </div></li><li>
+                <div>
+                    <label for="">
+                        How many NON-native trees are in the school campus?
+                    </label>
+                    <ul>
+                        <li>
+                            <label for="">None</label><input type="radio" name="NON-native" value="0" />
+                        </li>
+                        <li>
+                            <label for="">Less than 5-10 trees per acre of area</label><input type="radio" name="NON-native" value="lessthan5-10" />
+                        </li>
+                        <li>
+                            <label for="">About 5-10 trees per acre of area</label><input type="radio" name="NON-native" value="About5-10" />
+                        </li>
+                        <li>
+                            <label for="">More than 10 trees per acre of area</label><input type="radio" name="NON-native" value="Morethan10" />
+                        </li>
+                    </ul>
+                </div>
+                </li>
+    </ol>
+    <li>
+        <label for="">Approximately what percentage of the passages, paths and pavements in the school have a concreate cover?</label>
+        <ul>
+            <li>
+                <label for="">None</label><input type="radio" name="NON-native" value="0" />
+            </li>
+            <li>
+                <label for="">Less than 5-10 trees per acre of area</label><input type="radio" name="NON-native" value="lessthan5-10" />
+            </li>
+            <li>
+                <label for="">About 5-10 trees per acre of area</label><input type="radio" name="NON-native" value="About5-10" />
+            </li>
+            <li>
+                <label for="">More than 10 trees per acre of area</label><input type="radio" name="NON-native" value="Morethan10" />
+            </li>
+        </ul>
+    </li>
+    <li>
+        <label for="">Do you see weeds in your school campus?</label>
+        <input name="HasWeeds" type="radio" value="true" />Yes
+        <input name="HasWeeds" type="radio" value="false" />No
+
+        <label for=""> if yes, how frequently?</label>
+        <ul>
+            <li>
+                <label for="">Very Frequently</label><input type="radio" name="WeedFrequency" value="0" />
+            </li>
+            <li>
+                <label for="">Rarely</label><input type="radio" name="WeedFrequency" value="lessthan5-10" />
+            </li>
+            <li>
+                <label for="">Seldom</label><input type="radio" name="WeedFrequency" value="About5-10" />
+            </li>
+            <li>
+                <label for="">Never</label><input type="radio" name="WeedFrequency" value="Morethan10" />
+            </li>
+        </ul>
+    </li>
+    <li>
+        <label for=""> What procedure is adopted to remove weeds</label>
+        <ul>
+            <li>
+                <label for="">Manual removal of weeds</label><input type="radio" name="WeedMethod" value="0" />
+            </li>
+            <li>
+                <label for="">Use of pesticides / herbicides</label><input type="radio" name="WeedMethod" value="lessthan5-10" />
+            </li>
+            <li>
+                <label for="">Any other</label><input type="radio" name="WeedMethod" value="About5-10" />
+            </li>
+
+        </ul>
+    </li>
+    <b><i>To answer questions 10 to 14 you would need the help of the school gardener/other school personel</i></b>
+    <li>
+        <label for=""> What Types of manure/fertilizers are used for plants</label>
+        <ul>
+            <li>
+                <label for="">Only compost prepared at school </label><input type="checkbox" name="Fertilizers" value="SchoolCompost" />
+            </li>
+            <li>
+                <label for="">Mostly chemical fertilizers</label><input type="checkbox" name="Fertilizers" value="Fertilizer" />
+            </li>
+            <li>
+                <label for="">Organic compost purchased</label><input type="checkbox" name="Fertilizers" value="Compost" />
+            </li>
+            <li>
+                <label for="">Any otherspecify</label><input type="text" name="Fertilizers" placeholder="Any Other" />
+            </li>
+        </ul>
+    </li>
+    <li>
+        <label for="">Does the school use indigenous methodswashing/ neem cake/ oil/bio enzymes to tackle pests?</label>
+
+        <input name="IndigenousMethod" type="radio" value="true" />Yes
+        <input name="IndigenousMethod" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Is green wash composted in your school</label>
+
+        <input name="GreenWashComposted" type="radio" value="true" />Yes
+        <input name="GreenWashComposted" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Is there a possibility/ scope for converting rooftops and other concrete/barren spaces into green areas?</label>
+
+        <input name="GreenAreaPossibility" type="radio" value="true" />Yes
+        <input name="GreenAreaPossibility" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Is there a possibility to replace open concrete surfaces with permiable pavement for percolation of rain water into the ground</label>
+
+        <input name="RainWaterPossibility" type="radio" value="true" />Yes
+        <input name="RainWaterPossibility" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">
+            Does your school organize any talk/ interactive session to emphasize
+            interdependence of living creatures and encourage values of
+            Cooperation and collaboration
+        </label>
+
+        <input name="RainWaterPossibility" type="radio" value="true" />Yes
+        <input name="RainWaterPossibility" type="radio" value="false" />No <br />
+        <label for="">Give Details</label>
+        <input name="RainWaterPossibility" type="text" placeholder="Give Details" /> <br />
+    </li>
+    <li>
+        <label for="">Do the school authorities/ personnel prefer to gift potted plants/ saplings/ cuttings to guests, visitor and awardees</label>
+
+        <input name="RainWaterPossibility" type="radio" value="true" />Yes
+        <input name="RainWaterPossibility" type="radio" value="false" />No
+    </li>
+    <h6><b>2 Annexure: </b></h6><br />
+    <p>
+        Annexures provide you witha template for recording your observations regarding plants
+        and birds that you can see in you school campus Copy the template on a plain paper/computer
+        You can continue to extend the rows as you observe more and more birds and trees
+        You can do this exercise collectively<br /><br />I am sure it is going to be lot of fun
+
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">SNo</th>
+                <th rowspan="2">Species Name</th>
+                <th rowspan="2">Number of species</th>
+                <th rowspan="2">Category</th>
+                <th colspan="4">Site Visible</th>
+                <!--perching on trees     bird feed/bath      nest      flying across-->
+                <th colspan="3">Frequency of visibility</th>
+                <!--More often       Frequently        Rarely -->
+            </tr>
+            <tr>
+
+                <th>perching on trees</th>
+                <th>bird feed/bath</th>
+                <th>nest</th>
+                <th>flying across</th>
+                <th>More often</th>
+                <th>Frequently</th>
+                <th>Rarely</th>
+            </tr>
+
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>Parrot</td>
+            <td>2</td>
+            <td>Bird</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <ol>
+        <li>Fauna of the School</li>
+        <li>
+            Tree Survey Template
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th rowspan="3">SNo</th>
+                        <th rowspan="3">Name of plant</th>
+                        <th colspan="2">category</th>
+                        <th colspan="2">Flowering</th>
+                        <th colspan="2">Fruiting</th>
+                    </tr>
+                    <tr>
+                        <th>Native</th>
+                        <th>Non-Native</th>
+                        <th>Yes</th>
+                        <th>No</th>
+                        <th>Yes</th>
+                        <th>No</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>Mango</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </li>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <li>
+            <label for="">Other Flora Survey Template</label>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th rowspan="2">SNo</th>
+                        <th rowspan="2">Name of the plant</th>
+                        <th colspan="3">Category I</th>
+                        <!--perching on trees     bird feed/bath      nest      flying across-->
+                        <th colspan="3">Category II</th>
+                        <!--More often       Frequently        Rarely -->
+                    </tr>
+                    <tr>
+
+                        <th>Herbs</th>
+                        <th>Shrubs</th>
+                        <th>Creeper</th>
+                        <th>Native</th>
+                        <th>Non-Native</th>
+                        <th>invasive</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </thead>
+            </table>
+        </li>
+    </ol>
+</form>
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- Transportation Audit -->
+<div class="box TransportationAudit"
+<h3>Transportation audit</h3>
+<p>
+    <b>1 Survey:</b><br />
+    <i>You would need the help of the school transport department/ techer in-charge to undertake this audit</i>
+</p>
+<label for="">Q1 What is the total strenght of the school?</label>
+<ul>
+    <li><label for="">number of students </label><input type="number" name="NumberOfStudents" /></li>
+    <li><label for="">number of Teachers </label><input type="number" name="NumberOfTeachers" /></li>
+    <li><label for="">number of Administrative staff </label><input type="number" name="NumberOfAdministrativeStaff" /></li>
+    <li><label for="">number of Support staff in the labs, Library, Sports, Security, Maintainance etc </label><input type="number" name="NumberOfSupport" /></li>
+</ul>
+<label for="">Q2 Write the approximate percentage of the school student who travel to and from school from various modes of transportation?</label>
+<ul>
+    <li><label for="">Walk</label><input type="number" name="WalkStudents" /></li>
+    <li><label for="">Bicycle</label><input type="number" name="BicycleStudents" /></li>
+    <li><label for="">School Transport</label><input type="number" name="SchoolTransportStudents" /></li>
+    <li><label for="">Private transport/ personal vehicle</label><input type="number" name="PrivateTransportStudents" /></li>
+    <li><label for="">Public vehicle</label><input type="number" name="PublicTransportStudents" /></li>
+</ul>
+<p>
+    <i>
+        You will need to do a survey in school by asking the students You can as well use a google form or survey monkey to get estimates<br />
+        For junior students, please visit the classrooms and talk to the students regarding the same
+    </i>
+</p>
+<label for="">Q3 Write the appropriate percentage of the school teachers and other staff who travel to and from the school by various means of transportation</label>
+<ul>
+    <li><label for="">Walk</label><input type="number" name="WalkStaff" /></li>
+    <li><label for="">Bicycle</label><input type="number" name="BicycleStaff" /></li>
+    <li><label for="">School Transport</label><input type="number" name="SchoolTransportStaff" /></li>
+    <li><label for="">Private transport/ personal vehicle</label><input type="number" name="PrivateTransportStaff" /></li>
+    <li><label for="">Public vehicle</label><input type="number" name="PublicTransportStaff" /></li>
+</ul>
+<p>
+    <i>
+        You will need to do a survey in school by asking the students You can as well use a google form or survey monkey to get estimates<br />
+        For junior students, please visit the classrooms and talk to the students regarding the same
+    </i>
+</p>
+<label for="">Q4</label>
+<label for="">a Does your school have transport facility buses/cars/vans/matadors etc available for students and staff?</label>
+<input name="SchoolTransport" type="radio" value="true" />Yes
+<input name="SchoolTransport" type="radio" value="false" />No
+<label for="">b if yes, what are the number of vehicles in the school?</label>
+<table>
+    <thead>
+    <th>buses</th>
+    <th>vans</th>
+    <th>cars</th>
+    <th>matadors</th>
+    <th>other</th>
+    </thead>
+    <tr>
+        <td><input type="number" name="NumberofSchoolBuses" /></td>
+        </td>
+        <td>
+            <input type="number" name="NumberofSchoolVans" />
+        </td>
+        <td><input type="number" name="NumberofSchoolCars" /></td>
+        <td><input type="number" name="NumberofSchoolMatadors" /></td>
+        <td>
+            <input type="number" name="NumberofSchoolOtherVehicles" />
+    </tr>
+</table>
+<label for="">c  if no, is your school</label>
+<ol>
+    <li>
+        <label for="">provided free transport by the local municipality?</label>
+        <input name="SchoolTransportLocalMunicipality" type="radio" value="true" />Yes
+        <input name="SchoolTransport" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Hiring buses through private contractors</label>
+        <input name="SchoolTransportPrivateContractors" type="radio" value="true" />Yes
+        <input name="SchoolTransportPrivateContractors" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Hiring buses through state transport authorities</label>
+        <input name="SchoolTransportStateTransportAuthorities" type="radio" value="true" />Yes
+        <input name="SchoolTransportStateTransportAuthorities" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Any Other</label>
+        <input name="SchoolTransportOther" type="radio" value="true" />Yes
+        <input name="SchoolTransportOther" type="radio" value="false" />No
+    </li>
+</ol>
+<label for="">Q5 If the school has it's own transport vehicles:</label>
+<ol>
+    <li>
+        <label for="">How would you rate the condition of buses/ school transport?</label>
+
+        <label for="FrequencyOfNonRenewableFuelAwarenessProgram">Frequency</label>
+        <select name="FrequencyOfNonRenewableFuelAwarenessProgram" id="FrequencyOfNonRenewableFuelAwarenessProgram">
+            <option value="VeryGood">Very Good</option>
+            <option value="Good">Good</option>
+            <option value="Average">Average</option>
+            <option value="VeryPoor">Poor</option>
+            <option value="Poor">Very Poor</option>
+        </select>
+    </li>
+    <li>
+        <label for="">Are buses and other vehicles provided with horns, lights, reflectors, reversing&nbsp;lights and other safety&nbsp;features</label>
+        <input name="SchoolVehicleHorn" type="radio" value="true" />Yes
+        <input name="SchoolVehicleHorn" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Is preventive maintanace of school transport done regularly?</label>
+        <input name="SchoolVehicleMaintainance" type="radio" value="true" />Yes
+        <input name="SchoolVehicleMaintainance" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Are pollution checks regularly done for school buses and other vehicles?</label>
+        <p>You can verify by looking at records</p>
+        <input name="SchoolVehiclePollutionCheck" type="radio" value="true" />Yes
+        <input name="SchoolVehiclePollutionCheck" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Is there adequate parking space for vehicles in the school campus?</label>
+        <input name="SchoolVehicleParkingSpace" type="radio" value="true" />Yes
+        <input name="SchoolVehicleParkingSpace" type="radio" value="false" />No
+    </li>
+</ol>
+<label for=""> Q6 What is the number of buses and other vehicles thats chool owns and the fuels used by them? </label>
+<p>
+    You would get this information through the school transport in-charge/school office records
+</p>
+<table>
+    <tr>
+    <thead>
+    <th>Vehicles</th>
+    <th>Numbers</th>
+    <th>Use</th>
+    <th>Fuel Petrol/diesel/CNG/Electricity</th>
+    </thead></tr>
+    <tr><td>Buses</td><td></td><td></td><td></td></tr>
+    <tr><td>Vans</td><td></td><td></td><td></td></tr>
+    <tr><td>Cars</td><td></td><td></td><td></td></tr>
+    <tr><td>Matador</td><td></td><td></td><td></td></tr>
+    <tr><td><input type="text" placeholder="Others please specify" /></td><td></td><td></td><td></td></tr>
+
+</table>
+<label for="">Q7 Calculate the quantity of fuel consumed and the cost of different fuels used by your school transport per month</label>
+<p>You would need to average depending on the frequency of the bills paid</p>
+<table>
+    <tr>
+    <thead>
+    <th>Vehicles</th>
+    <th>Amount of fuel</th>
+    <th>Cost</th>
+    </thead></tr>
+    <tr><td>Buses</td><td></td><td></td><td></td></tr>
+    <tr><td>Vans</td><td></td><td></td><td></td></tr>
+    <tr><td>Cars</td><td></td><td></td><td></td></tr>
+    <tr><td>Matador</td><td></td><td></td><td></td></tr>
+    <tr><td><input type="text" placeholder="Others please specify" /></td><td></td><td></td><td></td></tr>
+
+</table>
+<label for="">Q8 Calculate the per person consumption of fuel and cost by dividing the liters consumed/ amount spent by number of people in the school</label>
+<label for="">Fuel Consumed per person Total fuel consumed/ number of people in the school</label>
+<p>
+    You would need to convert the fuel used into a commmon unit such as kilojoules before calculating the per person fuel used by your school
+    Take help of your science teacher and your senior students
+</p>
+<label for=""> 2 cost of transport per person</label>
+<p>*This excludes the use of personal car/ public and other private transport</p>
+<br />
+<label for="">Q9 A Does your school organize any program to encourage the use of public transport carpooling etc and to sensitize regarding the minimal used of non&ndash;renewable fuels?</label>
+<input name="NonRenewableWorkshop" type="radio" value="true" />Yes
+<input name="NonRenewableWorkshop" type="radio" value="false" />No
+<br /><label for=""> if yes, what is the nature of these program and how frequently are they organized?</label>
+<p> when students are target group, mention Class groupeg IX-XI</p>
+<table>
+    <tr></tr>
+    <thead>
+    <th>Program</th>
+    <th>Target Group</th>
+    <th>Frequency</th>
+    </thead></tr>
+    <tr>
+        <td>
+            <label for="FrequencyOfNonRenewableFuelAwarenessProgram">Frequency</label>
+            <select name="FrequencyOfNonRenewableFuelAwarenessProgram" id="FrequencyOfNonRenewableFuelAwarenessProgram">
+                <option value="Regularly">Regularly</option>
+                <option value="Average">Frequently</option>
+                <option value="Occasionally">Occasionally</option>
+                <option value="Rarely">Rarely</option>
+            </select>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <label for="FrequencyOfNonRenewableFuelAwarenessProgram">Frequency</label>
+            <select name="FrequencyOfNonRenewableFuelAwarenessProgram" id="FrequencyOfNonRenewableFuelAwarenessProgram">
+                <option value="Regularly">Regularly</option>
+                <option value="Average">Frequently</option>
+                <option value="Occasionally">Occasionally</option>
+                <option value="Rarely">Rarely</option>
+            </select>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <label for="FrequencyOfNonRenewableFuelAwarenessProgram">Frequency</label>
+            <select name="FrequencyOfNonRenewableFuelAwarenessProgram" id="FrequencyOfNonRenewableFuelAwarenessProgram">
+                <option value="Regularly">Regularly</option>
+                <option value="Average">Frequently</option>
+                <option value="Occasionally">Occasionally</option>
+                <option value="Rarely">Rarely</option>
+            </select>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            <label for="FrequencyOfNonRenewableFuelAwarenessProgram">Frequency</label>
+            <select name="FrequencyOfNonRenewableFuelAwarenessProgram" id="FrequencyOfNonRenewableFuelAwarenessProgram">
+                <option value="Regularly">Regularly</option>
+                <option value="Average">Frequently</option>
+                <option value="Occasionally">Occasionally</option>
+                <option value="Rarely">Rarely</option>
+            </select>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Waste Disposal Audit -->
+<div class="box WasteDisposalAudit"
+<h3> Waste Disposal Audit</h3>
+<form>
+<label for=""><b>1 Survey</b></label>
+<br />
+<label for="">Q1</label>
+<label for=""> Is your school campus litter free?</label>
+<input name="SchoolCampusLitter" type="radio" value="true" />Yes
+<input name="SchoolCampusLitter" type="radio" value="false" />No
+<br />
+<label for="">Q2</label>
+<label for="">As you walk in the school campus do you find dustbins at all places/ regular intervals?</label>
+<input name="SchoolDustbin" type="radio" value="true" />Yes
+<input name="SchoolDustbin" type="radio" value="false" />No
+<ol>
+    <li>
+        <label for="">if yes, is there number adequate?</label>
+        <input name="SchoolDustbin" type="radio" value="true" />Yes
+        <input name="SchoolDustbin" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for=""> How often do you see dustbins overflowing or students overcrowding dustbin areas</label>
+        <ul>
+            <li>
+                <label for="">Rarely</label><input type="radio" name="DustbinOverflowingFrequency" value="Rarely" />
+            </li>
+            <li>
+                <label for="">Seldom</label><input type="radio" name="DustbinOverflowingFrequency" value="Seldom" />
+            </li>
+            <li>
+                <label for="">Never</label><input type="radio" name="DustbinOverflowingFrequency" value="Never" />
+            </li>
+        </ul>
+    </li>
+</ol>
+<label for="">Q3 Are there different dustbins for different types of waste?</label>
+<input name="SchoolDustbinDifferent" type="radio" value="true" />Yes
+<input name="SchoolDustbinDifferent" type="radio" value="false" />No
+<br />
+<label for="">if yes, specify how are they identified?</label>
+<ul>
+    <li>
+        <label for="">Color Coded</label><input type="radio" name="DustbinOverflowingFrequency" value="ColorCoded" />
+    </li>
+    <li>
+        <label for="">Labelled</label><input type="radio" name="Dustbin" value="Labelled" />
+    </li>
+    <li>
+        <label for="">Any Otherspecify</label><input type="radio" name="DustbinOverflowingFrequency" value="Other" />
+    </li>
+</ul>
+<br />
+<label for="">Q4 Do the dustbins have proper cover/lids?</label>
+<input name="SchoolDustbinLids" type="radio" value="true" />Yes
+<input name="SchoolDustbinLids" type="radio" value="false" />No
+<br />
+<label for="">
+    Q5 tick the categories into which waste is segregated into your school:
+</label>
+<ul>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">Dry Waste</label></li>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">Wet Waste</label></li>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">E-waste</label></li>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">Hazardous Waste from the Labs</label></li>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">Chemical Waste</label></li>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">Paints</label></li>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">Sanitary Waste</label></li>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">Garden Waste</label></li>
+    <li><input type="checkbox" name="CategoriesOfWasteSegregation" value="DryWaste" /><label for="">Miscellaneous</label></li>
+</ul>
+<br />
+<label for="">Q6 Is dry waste segregated in your school?</label>
+<input name="DryWasteSegregated" type="radio" value="true" />Yes
+<input name="DryWasteSegregated" type="radio" value="false" />No
+<br />
+<label for="">if yes, then in how many categories?</label>
+<label for=""> What Types of manure/fertilizers are used for plants</label>
+<ul>
+    <li>
+        <label for="">Electronic</label><input type="checkbox" name="Fertilizers" value="DryWasteElectronic" />
+    </li>
+    <li>
+        <label for="">Metal</label><input type="checkbox" name="Fertilizers" value="DryWasteMetal" />
+    </li>
+    <li>
+        <label for="">Thermocol</label><input type="checkbox" name="Fertilizers" value="DryWasteThermocol" />
+    </li>
+    <li>
+        <label for="">Food packaging</label><input type="checkbox" name="Fertilizers" value="DryWasteFoodPackaging" />
+    </li>
+    <li>
+        <label for="">Tetra pack</label><input type="checkbox" name="Fertilizers" value="DryWasteTetraPack" />
+    </li>
+    <li>
+        <label for="">Wood</label><input type="checkbox" name="Fertilizers" value="DryWasteWood" />
+    </li>
+    <li>
+        <label for="">Plastic</label><input type="checkbox" name="Fertilizers" value="DryWastePlastic" />
+    </li>
+    <li>
+        <label for="">Any otherspecify</label><input type="text" name="Fertilizers" placeholder="Any Other" />
+    </li>
+</ul>
+<label for=""> Q7 Kitchen/Canteen waste</label>
+<ol>
+    <li>
+        <label for="">What kind of food is served in your canteen kitchen</label>
+        <ul>
+            <li>
+                <label for="">Fresh Food Only</label>
+                <input type="radio" name="TypeOfFood" value="FreshFoodOnly" />
+            </li>
+            <li>
+                <label for="">Packaged Only</label>
+                <input type="radio" name="TypeOfFood" value="PackagedFoodOnly" />
+            </li>
+            <li>
+                <label for="">Both Fresh and packaged food</label>
+                <input type="radio" name="TypeOfFood" value="BothFood" />
+            </li>
+        </ul>
+    </li>
+    <li>
+        <label for="">What kind of cutlery is used in your canteen/kitchen</label>
+        <ul>
+            <li>
+                <label for="">Steel/ utensils</label>
+                <input type="checkbox" name="TypeOfCutlery" value="SteelUtensils" />
+            </li>
+            <li>
+                <label for="">Plastic Plates</label>
+                <input type="checkbox" name="TypeOfCutlery" value="PlasticPlates" />
+            </li>
+            <li>
+                <label for="">Disposable Wooden Cutlery</label>
+                <input type="checkbox" name="TypeOfCutlery" value="DisposableWoodenCutlery" />
+            </li>
+            <li>
+                <label for="">Bring Your Own Cutlery</label>
+                <input type="checkbox" name="TypeOfCutlery" value="BringYourOwnCutlery" />
+            </li>
+            <li>
+                <label for="">Other</label>
+                <input type="checkbox" name="TypeOfCutlery" value="Other" />
+            </li>
+        </ul>
+    </li>
+</ol>
+<label for="">Q8 How Frequently are dust/Waste Bins Emptied?</label>
+<ul>
+    <li>
+        <label for="">Daily</label><input type="radio" name="DustbinEmptiedFrequency" value="Daily" />
+    </li>
+    <li>
+        <label for="">Twice a Week</label><input type="radio" name="DustbinEmptiedFrequency" value="TwiceAWeek" />
+    </li>
+    <li>
+        <label for="">Weekly</label><input type="radio" name="DustbinEmptiedFrequency" value="Weekly" />
+    </li>
+    <li>
+        <label for="">Any Other</label><input type="radio" name="DustbinEmptiedFrequency" value="Other" />
+    </li>
+</ul>
+<label for="">Q9 How Are different Types of Wastes Disposed off in your school?</label>
+<table border="1">
+    <thead>
+        <tr>
+            <th>
+                Different Types of waste
+            </th>
+            <th colspan="9"> Methods of disposal </th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Burnt/ Disposed</th>
+            <th>Sold to authorized dealer</th>
+            <th>Composted</th>
+            <th>Recycled</th>
+            <th>Put in a dustbin and Handed to municipality</th>
+            <th>Sold to local scrap dealer</th>
+            <th>Used for art and decoration purposed</th>
+            <th>Donated to an NGO</th>
+            <th>Any other</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>Dry Waste</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+    <tr>
+        <td>Kitchen/Cafeteria Waste</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+    <tr>
+        <td>Packaged Material</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+    <tr>
+        <td>E-Waste</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+    <tr>
+        <td>Bio Medical Waste</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+    <tr>
+        <td>Garden Waste</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+    <tr>
+        <td>Paper Waste</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+    <tr>
+        <td>LandFills</td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+        <td><input type="checkbox" /></td>
+    </tr>
+</table>
+<br /><label for="">Q10</label>
+<br />
+<ol>
+    <li>
+        <label for="">Is the composting an organized activity and encouraged for student and staff in your school?</label>
+        <input name="CompostingActivityOrganized" type="radio" value="true" />Yes
+        <input name="CompostingActivityOrganized" type="radio" value="false" />No
+        <br />
+    </li>
+    <li>
+        <label for="">Is the compost prepared used for gardening in the school?</label>
+        <input name="CompostingActivityOrganized" type="radio" value="true" />Yes
+        <input name="CompostingActivityOrganized" type="radio" value="false" />No
+        <br />
+    </li>
+</ol>
+<label for="">Q11 Does your school advocate and provide information to reduce waste in school?</label>
+<input name="AdvocatesWasteReduction" type="radio" value="true" />Yes
+<input name="AdvocatesWasteReduction" type="radio" value="false" />No
+<br />
+<label for="">Q12 Are posters/ sloagns placed at various points in school to remind students of proper way of waste reduction?</label>
+<input name="AdvocatesWasteReductionPoster" type="radio" value="true" />Yes
+<input name="AdvocatesWasteReductionPoster" type="radio" value="false" />No
+<br />
+<label for="">Q13 Paper Waste</label>
+<br />
+<p><i>Please tick mark the practices which your School encourage for encouraging the reduction of use of paper</i></p>
+<ol>
+    <li>
+        <label for="">Does your School Encourage use of single side paper for printing and other purposes?</label><input name="SingleSidePaper" type="checkbox" />
+    </li>
+    <li>
+        <label for="">Does your administration practice double side printing and photocopy?</label><input name="DoubleSidePrinting" type="checkbox" />
+    </li>
+    <li>
+        <label for="">Does your school discourage the use of paper decoration and other promotional material?</label><input name="DecorationPaper" type="checkbox" />
+    </li>
+    <li>
+        <label for="">Does your School Encourage use of digital/ electronic version of assignments, reports, newsletter etc?</label><input name="DigitalAssignments" type="checkbox" />
+    </li>
+    <li>
+        <label for="">Does your School encouraged/ tried making paper mache items?</label><input name="PaperMache" type="checkbox" />
+    </li>
+</ol>
+<label for="">Q14 Is there a student appreciation/ recognition reward for observing effient waste managemnt practices?</label>
+<input name="WasteManagementReward" type="radio" value="true" />Yes
+<input name="WasteManagementReward" type="radio" value="false" />No
+<br /><label for="">if yes, Specify it's nature</label>
+<input type="text"/>
+<input type="button" placeholder="submit" />
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Water Audit -->
+<div class="box WaterAudit">
+<h1>Water Audit</h1>
+<label for=""><b>1Survey:</b></label>
+<label for="">Q1 Does your school have one source of water </label>
+<input name="SourceOfWater" type="radio" value="true" />Yes
+<input name="SourceOfWater" type="radio" value="false" />No
+<br />
+<label for="">
+    Q2 What sources does your school draw water from?
+</label>
+<ul>
+    <li>
+        <label for="">Municipal Water</label>
+        <input name="SourcesOfWater" type="checkbox" />
+    </li>
+    <li>
+        <label for="">Ground Water</label>
+        <input name="SourcesOfWater" type="checkbox" />
+    </li>
+    <li>
+        <label for="">Packed Water</label>
+        <input name="SourcesOfWater" type="checkbox" />
+    </li>
+    <li>
+        <label for="">Tanker</label>
+        <input name="SourcesOfWater" type="checkbox" />
+    </li>
+</ul>
+<label for="">Q3 Does your school use the same source of water for drinking and sanitation?</label>
+<input name="SourceOfWaterSame" type="radio" value="true" />Yes
+<input name="SourceOfWaterSame" type="radio" value="false" />No
+<br />
+<label for="">Q4 What Procedures has your school adopted to make water potable fit for drinking?</label>
+<input type="text" />
+<br />
+<label for="">Q5 Is the drinking water texted for potability in accredited labs?</label>
+<input name="DrinkingWaterTested" type="radio" value="true" />Yes
+<input name="DrinkingWaterTested" type="radio" value="false" />No
+<br />
+<label for="">Q6 What is the total water consumption of the school?</label>
+<ul>
+    <li>
+        <label for="">Municipal Water</label>
+        <input type="number" />
+        <br /><p>
+            Calculate using annual water bills from the municipal authorities
+            Average annual water bills to find out mean consumption per month
+        </p>
+    </li>
+    <li>
+        <label for="">Ground Water</label>
+        <input type="number" />
+        <br /><p>
+            Calculate no of hours the pump runs for, calculate the volume of bore well outlet
+        </p>
+    </li>
+    <li>
+        <label for="">Tankers</label>
+        <input type="number" />
+        <br /><p>
+            Calculate the capacity of tankers and multiply them into number of tankers
+        </p>
+    </li>
+    <li>
+        <label for="">Packaged Drinking Water</label>
+        <input type="number" />
+        <br /><p>
+            Quantity purchased per month/ Quarter
+        </p>
+    </li>
+</ul>
+<label for="">Calculate Average consumption per person of the school</label>
+<input type="number" />
+<p>
+    Divide the total valume by the number of people in the schoolstudents teachers others workers/employees in the school
+    to arrive at the per capita per person water consumption of your school
+</p>
+<label for="">Calculate the average per capita cost</label>
+<input type="number" />
+<p>
+    Divide the total cost by number of people in the school
+</p>
+<label for=""> Q7 Does your school have a water conservation policy?</label>
+<input name="WaterConservationPolicy" type="radio" value="true" />Yes
+<input name="WaterConservationPolicy" type="radio" value="false" />No
+<label for=""> Q8 If yes, then what water conservation practices does your school adopt?</label>
+<ol>
+    <li>
+        <label for="">
+            Do majority of taps in you school have fixtures that minimize loss <br />
+            of waterlow flow taps, self-closing taps, use of sensors, timers shut
+            of devices,use of low regulatiors etc?
+        </label>
+        <input name="LowFlowTaps" type="radio" value="true" />Yes
+        <input name="LowFlowTaps" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Do you have a dual flush system in you school toilet to minimize loss of water?</label>
+        <input name="DualFlush" type="radio" value="true" />Yes
+        <input name="DualFlush" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Are float valves fixed in various water tanks to avoid water wastage?</label>
+        <input name="FloatValve" type="radio" value="true" />Yes
+        <input name="FloatValve" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Is there a mechanism for grey water recyclingreuse of water used for washing/ AC water in your school?</label>
+        <input name="GreyWaterRecycling" type="radio" value="true" />Yes
+        <input name="GreyWaterRecycling" type="radio" value="false" />No
+    </li>
+    <li>
+        <label for="">Is rain water harvesting done in school?</label>
+        <input name="RainWaterHarvesting" type="radio" value="true" />Yes
+        <input name="RainWaterHarvesting" type="radio" value="false" />No
+    </li>
+</ol>
+<label for="">Q9 How quickly are leaking taps of toilets/ overhead tanks etc repaired?</label>
+<ul>
+    <li><label for="">Promptly</label><input type="checkbox" name="Promptly" /></li>
+    <li><label for="">In a day or so</label><input type="checkbox" name="InADayOrSo" /></li>
+    <li><label for="">Irregularly</label><input type="checkbox" name="Irregularly" /></li>
+</ul>
+<label for="">Q10 Are lids of the water tank secure?</label>
+<input name="WaterTankSecureLids" type="radio" value="true" />Yes
+<input name="WaterTankSecureLids" type="radio" value="false" />No
+<br />
+<label for="">Q11 how often are the storage tanks cleaned?</label>
+<ul>
+    <li><label for="">Once a Year</label><input type="checkbox" name="OnceAYear" /></li>
+    <li><label for="">Twice</label><input type="checkbox" name="Twice" /></li>
+    <li><label for="">Quaterly</label><input type="checkbox" name="Quaterly" /></li>
+    <li><label for="">Any Other</label><input type="text" name="Quaterly" placeholder="Specify" /></li>
+</ul>
+<p><b>Reference: Landscape and horticulture on the campus</b></p>
+<label for="">Q12 What is the approximate area of lawns with green grass in you school that requires regular watering? </label>
+<input type="number" name="GreenGrassRequiringWatering" placeholder="Specify" />
+<p><i>Take help of the google maps to calculate the area of lawns</i></p>
+<label for="">Q13 Which of the following methods of irrigation is used for watering of grass and plants to the school? Tick the ones that are appropriate</label>
+<ul>
+    <li><label for="">Manual Watering using a garden hose pipe</label><input type="checkbox" name="ManualWatering" /></li>
+    <li><label for="">Sprinklet system with long range sprinklers</label><input type="checkbox" name="SprinklerLong" /></li>
+    <li><label for="">Sprinklet system with short range sprinklers</label><input type="checkbox" name="SprinklerShort" /></li>
+    <li><label for="">Drip Irrigation System</label><input type="checkbox" name="DripIrrigationSystem" /></li>
+    <li><label for="">Any Other</label><input type="text" name="OtherIrrigationSystem" placeholder="Specify" /></li>
+</ul>
+<label for="">
+    Q14 What system do you use to harvest rainwater?
+</label>
+<li><label for="">Direct Storage</label><input type="checkbox" name="DirectStorage" /></li>
+<li><label for="">Rain Water Harvesting Tanks</label><input type="checkbox" name="RainWaterHarvestingTanks" /></li>
+<li><label for="">Direct Storage To Raw Water Storage Tanks</label><input type="checkbox" name="DirectStorageToRawWaterStorageTanks" /></li>
+<li><label for="">Recharge Into The Ground Aquifer</label><input type="checkbox" name="RechargeIntoTheGroundAquifer" /></li>
+<label for="">Q15 Are unpaved/ green surfaces available in school for percolation of rain water?</label>
+<input name="WaterTankSecureLids" type="radio" value="true" />Yes
+<input name="WaterTankSecureLids" type="radio" value="false" />No
+<br />
+<label for="">Q16 What is the capacity of rain water storage tanks? Specify Size</label>
+<input type="number" />
+<br />
+<label for="">Q17 How many tanks/ structures and their locations? Indicate the location of rain water storage tanks</label>
+<input type="text" />
+<br />
+<label for="">Q18 How is the water harvested utilized?</label>
+<ul>
+    <li><label for="">Internal recycling in school campus applications such as gardening toilets cleaning of school</label><input type="checkbox" /></li>
+    <li><label for="">Ground water recharge through trenches</label><input type="checkbox" /></li>
+    <li><label for="">External recycling it is recycled into main supply</label><input type="checkbox" /></li>
+</ul>
+<br />
+<label for="">Q19 Are awareness campaigns conducted for conservation of water in your school?</label>
+<input name="WaterAwarenessCampaigns" type="radio" value="true" />Yes
+<input name="WaterAwarenessCampaigns" type="radio" value="false" />No
+<br />
+<label for="">Q20 Are gardeners, cooks, safia-sevaks and others in your school of the need and ways to conserve water?</label>
+<input name="WorkersAwarenessConserveWater" type="radio" value="true" />Yes
+<input name="WorkersAwarenessConserveWater" type="radio" value="false" />No
+<br />
+<label for="">Q21 Are water conservation stickers / signs / posters fixed in bathroom canteen classrooms and other places to remind students of good practices?</label>
+<input name="WaterConservationStickers" type="radio" value="true" />Yes
+<input name="WaterConservationStickers" type="radio" value="false" />No
+<br />
+<button onclick=MorphToNext>Submit<button>
+ </div>
+<!--Fin-->
+
